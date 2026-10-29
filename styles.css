@@ -241,3 +241,24 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 .foot-bottom{border-top:1px solid rgba(255,255,255,.16);padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:13px}
 
 [hidden]{display:none!important}
+
+/* Oct 29 additions */
+.founding{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;background:var(--raised);border:2px dashed var(--mustard);border-radius:16px;padding:20px 24px}
+.founding p{flex:1 1 360px;min-width:0;font-size:16px}
+.founding-line{background:rgba(255,210,63,.14);border:1px solid rgba(255,210,63,.5);color:#fff !important;border-radius:12px;padding:10px 16px;font-size:15px;font-weight:700}
+.call-line{font-size:15px;margin-top:4px}
+.cta-band .call-line a{color:var(--mustard);font-weight:800}
+.demo-msg{display:flex;flex-direction:column;gap:12px;background:#F3F5FA;border-radius:12px;padding:14px 16px}
+.demo-msg p{font-size:15px;font-weight:700}
+.old-note{margin-top:10px;font-size:14px;font-weight:800;color:var(--field)}
+.field-note{font-size:13px;color:var(--ink-muted);line-height:1.4}
+.legal{padding-top:64px;padding-bottom:88px;display:flex;flex-direction:column;gap:14px}
+.legal-sec{display:flex;flex-direction:column;gap:8px;padding-top:18px;border-top:1px solid var(--line)}
+.legal-sec h2{font-size:1.35rem}
+.legal-sec ul{padding-left:22px;display:flex;flex-direction:column;gap:4px}
+.foot-bottom a{color:var(--on-navy);text-decoration:underline}
+.nav-right .btn{white-space:nowrap}
+@media (max-width:420px){.nav{gap:10px}.nav-right{gap:8px}.nav-right .btn{font-size:12px;padding:11px 12px;letter-spacing:.04em;min-height:44px}}
+/* Readable links inside navy CTA banners */
+.cta-band a:not(.btn){color:var(--mustard);font-weight:800;text-decoration:underline}
+.cta-band a:not(.btn):hover{color:#fff}
