@@ -3,110 +3,151 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ballpark Leads — Instant cost calculators for contractor websites</title>
-<meta name="description" content="Give homeowners an instant price range on your website and get the lead in your inbox. Built for roofing and HVAC contractors. Try it free.">
-<meta property="og:title" content="Ballpark Leads — Instant cost calculators for contractor websites">
-<meta property="og:description" content="Give homeowners an instant price range on your website and get the lead in your inbox. Built for roofing and HVAC contractors. Try it free.">
+<title>Ballpark Leads — Instant estimate calculators for HVAC websites</title>
+<meta name="description" content="Show homeowners a tight price range on your website with your logo and your prices, and get the lead in your inbox. Install and Maintenance calculators for HVAC companies. Try it free.">
+<meta property="og:title" content="Ballpark Leads — Instant estimate calculators for HVAC websites">
+<meta property="og:description" content="Show homeowners a tight price range on your website with your logo and your prices, and get the lead in your inbox. Install and Maintenance calculators for HVAC companies. Try it free.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#14254A">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@500;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="promo">Try it free — we build a working demo of your calculator with your prices. <a href="signup.html">Get my free demo →</a></div>
+<div class="promo">Free demo: we build a working calculator with your logo and your prices. <a href="signup.html">Try it free →</a></div>
 <header class="site-header">
-  <nav class="wrap nav" aria-label="Main">
-    <a class="brand" href="index.html" aria-label="Ballpark Leads home"><img src="assets/logo-horizontal.svg" alt="Ballpark Leads" width="184" height="64"></a>
-    <ul class="nav-links"><li><a href="index.html" aria-current="page">Home</a></li><li><a href="features.html">Why Ballpark Leads</a></li><li><a href="industries.html">Industries</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="signup.html">Sign up</a></li></ul>
-    <div class="nav-cta">
-      <a class="btn btn-outline" href="pricing.html">See pricing</a>
-      <a class="btn btn-primary" href="signup.html">Try it free</a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Menu">Menu</button>
-    </div>
-  </nav>
+<div class="wrap nav">
+<a class="brand" href="index.html"><img src="assets/logo-horizontal.svg" alt="Ballpark Leads" width="176" height="61"></a>
+<nav aria-label="Main"><ul class="nav-links"><li><a href="install.html">Install calculator</a></li><li><a href="maintenance.html">Maintenance calculator</a></li><li><a href="index.html#how">How it works</a></li><li><a href="pricing.html">Pricing</a></li></ul></nav>
+<div class="nav-right"><a class="btn btn-primary btn-sm" href="signup.html">Try it free</a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14254A" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div>
+</div>
 </header>
 <main id="main">
 
-<section class="hero"><div class="wrap hero-grid">
-  <div>
-    <span class="eyebrow">Cost calculators for contractors</span>
-    <h1>Give homeowners a price. Get the lead.<span class="script">Ballpark Leads</span></h1>
-    <p class="lede">An instant cost calculator for your website. Homeowners see a fair price range in seconds — you get their name, number and project details in your inbox.</p>
-    <div class="hero-ctas"><a class="btn btn-primary btn-lg" href="signup.html">Try it free</a><a class="btn btn-outline btn-lg" href="#demo">Try the demo</a></div>
-    <ul class="checks"><li>Built for you</li><li>Pay per lead</li><li>No contract</li></ul>
-  </div>
-  <div id="demo"><div class="calc" data-calc data-start="roofing" aria-label="Demo cost calculator">
-    <div class="calc-top"><span class="tag">Instant estimate</span><div class="calc-tabs" role="tablist"><button type="button" data-tab="roofing" role="tab">Roofing</button><button type="button" data-tab="hvac" role="tab">HVAC</button></div></div>
-    <div class="calc-body">
-      <form data-pane="roofing" onsubmit="return false">
-        <div class="field"><label for="r-sqft">Home size</label><input id="r-sqft" type="range" name="sqft" min="1000" max="4500" step="100" value="2200"><div class="range-row"><span>1,000</span><strong data-sqft-out>2,200 sq ft</strong><span>4,500</span></div></div>
-        <div class="field"><span class="label">Stories</span><div class="chips"><label><input type="radio" name="stories" value="1" checked><span>1 story</span></label><label><input type="radio" name="stories" value="2"><span>2 stories</span></label><label><input type="radio" name="stories" value="3"><span>3 stories</span></label></div></div>
-        <div class="field"><span class="label">Roof material</span><div class="chips"><label><input type="radio" name="material" value="asphalt" checked><span>Asphalt shingle</span></label><label><input type="radio" name="material" value="metal"><span>Metal</span></label><label><input type="radio" name="material" value="tile"><span>Tile</span></label></div></div>
-      </form><form data-pane="hvac" onsubmit="return false" hidden>
-        <div class="field"><label for="h-sqft">Home size</label><input id="h-sqft" type="range" name="sqft" min="800" max="4500" step="100" value="1900"><div class="range-row"><span>800</span><strong data-sqft-out>1,900 sq ft</strong><span>4,500</span></div></div>
-        <div class="field"><span class="label">System</span><div class="chips"><label><input type="radio" name="system" value="ac" checked><span>AC only</span></label><label><input type="radio" name="system" value="heatpump"><span>Heat pump</span></label><label><input type="radio" name="system" value="full"><span>AC + furnace</span></label></div></div>
-        <div class="field"><span class="label">Efficiency</span><div class="chips"><label><input type="radio" name="efficiency" value="standard" checked><span>Standard</span></label><label><input type="radio" name="efficiency" value="high"><span>High efficiency</span></label></div></div>
-      </form>
-      <div class="estimate" aria-live="polite"><span class="label">Your ballpark estimate</span><div class="amount" data-amount>$—</div><small data-detail></small></div>
-      <a class="btn btn-primary btn-block" href="signup.html?trade=roofing">Put this on my website — free demo</a>
-    </div>
-    <div class="calc-foot"><img src="assets/logo-mark.svg" alt="" width="20" height="20">Powered by Ballpark Leads · live demo</div>
-  </div></div>
-</div></section>
-<hr class="divider">
-<section class="section-alt"><div class="wrap">
-  <div class="section-head"><span class="eyebrow">Why contractors use it</span><h2>More leads from the traffic you already pay for</h2><p class="muted">Homeowners want a price before they pick up the phone. Ballpark Leads gives them one — and gives you a way to follow up.</p></div>
-  <div class="grid g3"><div class="card"><div class="icon ketchup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Prices in seconds</h3><p class="muted">Homeowners answer a few quick questions and see a fair price range on the spot — no waiting for a callback.</p></div><div class="card"><div class="icon grass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-6l-2 3h-4l-2-3H2"/><path d="M5.5 5h13L22 12v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6z"/></svg></div><h3>Leads straight to your inbox</h3><p class="muted">Every estimate comes with the homeowner's name, phone, email and project details, sent to you first.</p></div><div class="card"><div class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Branded estimate PDF</h3><p class="muted">Each homeowner gets a clean estimate with your logo, so your company is the one they remember.</p></div><div class="card"><div class="icon "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></div><h3>Better-qualified calls</h3><p class="muted">People who've already seen a price range and still reach out are ready to talk about a real job.</p></div><div class="card"><div class="icon ketchup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.5"/></svg></div><h3>Pay per lead, not per month</h3><p class="muted">$2–$5 per lead from a prepaid credit. No monthly retainer, no long contract.</p></div><div class="card"><div class="icon grass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0 5 5L22 14l-8 8-2.3-2.3a4 4 0 0 0-5-5L4 12l8-8z"/></svg></div><h3>Done for you</h3><p class="muted">We build it with your prices and add it to your site. You don't touch code.</p></div></div>
-  <p class="center" style="margin-top:36px"><a class="btn btn-primary btn-lg" href="signup.html">Sign up now</a></p>
-</div></section>
-<section class="section-navy" id="how"><div class="wrap">
-  <div class="section-head"><span class="eyebrow" style="color:var(--mustard)">How it works</span><h2>Live on your site without lifting a finger</h2></div>
-  <div class="steps">
-  <div class="step"><h3>Tell us your prices</h3><p class="muted">Share how you price a typical job. A short call or a price sheet is enough.</p></div>
-  <div class="step"><h3>We build your calculator</h3><p class="muted">Your calculator, your brand, your numbers — added to your website and ad landing pages.</p></div>
-  <div class="step"><h3>Leads land in your inbox</h3><p class="muted">Every homeowner who gets an estimate becomes a lead with contact info and project details.</p></div>
+<div class="wrap hero">
+<div class="stack-lg">
+<p class="eyebrow">Instant estimates for HVAC companies</p>
+<p class="script script-line">Show them the price.</p>
+<h1>Get the call before they click back to Google.</h1>
+<p class="lede">An instant estimate calculator on your website, with your logo and your own prices. Homeowners see a tight price range in about a minute. You get the lead with their address, unit details and the option they picked.</p>
+<div class="row" style="padding-top:8px"><a class="btn btn-primary" href="signup.html">Try it free</a><a class="btn btn-outline" href="#how">See how it works</a></div>
+<ul class="checks"><li>Your logo and prices</li><li>Unlimited leads</li><li>Month to month</li></ul>
 </div>
-  <p class="center" style="margin-top:36px"><a class="btn btn-mustard btn-lg" href="signup.html">Try it free</a></p>
+<div><div class="calc" data-install>
+<div class="calc-head dark"><span class="logo-slot">YOUR LOGO</span><span class="calc-title">NEW SYSTEM ESTIMATE</span></div>
+<form class="calc-q compact" onsubmit="return false" aria-label="Demo estimate">
+<div><label class="q" for="h-addr" style="font-size:14px;padding-bottom:6px">Home address or ZIP code</label><input class="text-in" id="h-addr" name="addr" value="412 Bayshore Dr, Tampa, FL 33606" autocomplete="street-address"></div>
+<fieldset><legend>System</legend><div class="chips"><label class="chip"><input type="radio" name="sys" value="ac_furnace">AC with a gas furnace</label><label class="chip"><input type="radio" name="sys" value="ac_handler" checked>AC with an air handler</label><label class="chip"><input type="radio" name="sys" value="heatpump">Heat pump</label><label class="chip"><input type="radio" name="sys" value="notsure">Not sure</label></div></fieldset>
+<fieldset><legend>Size</legend><div class="chips"><label class="chip"><input type="radio" name="size" value="2">2 ton</label><label class="chip"><input type="radio" name="size" value="2.5">2.5</label><label class="chip"><input type="radio" name="size" value="3" checked>3</label><label class="chip"><input type="radio" name="size" value="3.5">3.5</label><label class="chip"><input type="radio" name="size" value="4">4</label><label class="chip"><input type="radio" name="size" value="notsure">Not sure</label></div></fieldset>
+<fieldset><legend>Option</legend><div class="chips"><label class="chip"><input type="radio" name="opt" value="good">Good</label><label class="chip"><input type="radio" name="opt" value="better" checked>Better</label><label class="chip"><input type="radio" name="opt" value="best">Best</label></div></fieldset>
+<div class="mini-est" aria-live="polite"><span class="script">Your estimate</span><span class="amt" data-amt>$9,150 – $10,000</span><span class="sub">Installed, existing ductwork, before any rebates.</span><span class="tagline">ESTIMATE ONLY · NOT A QUOTE</span></div>
+<a class="btn btn-primary btn-block btn-square btn-sm" href="install.html">See the full calculator</a>
+</form>
+<p class="calc-foot">Sample prices. Your calculator uses your price book.</p>
+</div></div>
+</div>
+
+<section class="band-white"><div class="wrap sec stack-lg" style="gap:36px">
+<div class="head"><p class="eyebrow red">The problem</p><h2>Homeowners want a price before they call.</h2></div>
+<div class="grid g-260">
+<div class="card soft stack" style="padding:28px;gap:8px"><span class="stat-num red">70%</span><span style="font-size:18px">of homeowners would rather call a company that shows prices</span></div>
+<div class="card soft stack" style="padding:28px;gap:8px"><span class="stat-num">20–31%</span><span style="font-size:18px">of contractors show any price on their website</span></div>
+<div class="card soft stack" style="padding:28px;gap:8px"><span class="stat-num">55%</span><span style="font-size:18px">of buyers get only one quote, though most plan to get three</span></div>
+</div>
+<div class="callout grid g-300" style="align-items:center;gap:32px">
+<div class="stack" style="gap:6px"><span class="big" style="font-size:64px;line-height:1;font-weight:800">$104</span><span>average Google Ads cost of one HVAC lead</span></div>
+<p style="font-size:19px;line-height:1.5">You pay for the click whether they call or not. When your site says “call for a quote,” they hit the back button and call whoever shows a number.</p>
+</div>
+<p class="small muted">Sources: Clear Seas Research and ACHR News (2023–2024) and a Lennox buyer study, via Ad Genius (Jul 2026); SearchLight Digital, 816 HVAC contractors (Jan 2026).</p>
 </div></section>
-<section><div class="wrap">
-  <div class="section-head"><span class="eyebrow">Industries we serve</span><h2>Built for the trades</h2><p class="muted">Roofing and HVAC are live now. More trades are rolling out.</p></div>
-  <div class="grid g4"><a class="card trade" href="roofing.html"><span class="badge live">Live now</span><div class="icon ketchup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12 12 3l10 9"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div><h3>Roofing</h3><p class="muted">Replacements and repairs by home size, pitch, stories and material.</p><span class="more">See the calculator →</span></a><a class="card trade" href="hvac.html"><span class="badge live">Live now</span><div class="icon navy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg></div><h3>HVAC</h3><p class="muted">AC, heat pump and full-system installs by home size and efficiency.</p><span class="more">See the calculator →</span></a><a class="card trade" href="signup.html?trade=pools"><span class="badge">Coming soon</span><div class="icon grass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 18c2-2 4-2 6 0s4 2 6 0 4-2 6 0M7 9V4h3M14 9V4h3"/></svg></div><h3>Pools</h3><p class="muted">New builds, resurfacing and equipment by size, shape and finish.</p><span class="more">Join the waitlist →</span></a><a class="card trade" href="signup.html?trade=landscaping"><span class="badge">Coming soon</span><div class="icon "><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-6 6-10 16-10 0 10-4 16-9 17z"/><path d="M4 21c4-6 8-9 12-11"/></svg></div><h3>Landscaping</h3><p class="muted">Sod, pavers, mulch and cleanups by yard size and materials.</p><span class="more">Join the waitlist →</span></a></div>
+
+<section class="wrap sec stack-lg" style="gap:40px">
+<div class="head"><p class="eyebrow">Two calculators</p><h2>Start with one. Add the other when you’re ready.</h2><p class="lede" style="font-size:18px">Or get both for <b style="color:var(--navy)">$50 a month and $400 setup</b>.</p></div>
+<div class="grid g-340" style="gap:24px">
+<div class="card lg stack">
+<span class="tag">Install</span><h3 style="font-size:28px">New system estimates</h3>
+<p class="muted" style="font-size:17px">Central AC, heat pumps and gas furnaces. Good, better and best options, priced from your price book.</p>
+<ul class="diamonds"><li>Optional label photo or model number sets the size</li><li>“Not sure” on every question, so nobody gets stuck</li><li>Utility rebates shown beside the options that qualify</li><li>Ranges kept tight: high end within 10% of the low end</li></ul>
+<div class="card-foot"><span class="price-inline">$29<small> /month + $250 setup</small></span><a href="install.html" style="font-weight:800;text-decoration:none">See the Install calculator →</a></div>
+</div>
+<div class="card lg stack">
+<span class="tag green">Maintenance</span><h3 style="font-size:28px">Tune-ups and plan sign-ups</h3>
+<p class="muted" style="font-size:17px">Homeowners book a tune-up or join your maintenance plan online, any time of day. 70% would rather book online than call.</p>
+<ul class="diamonds"><li>Plans billed monthly, with extra systems priced in</li><li>Repair questions book a diagnostic visit</li><li>Flags old or R-22 systems for a replacement estimate</li><li>Booked visits land on your calendar</li></ul>
+<div class="card-foot"><span class="price-inline">$29<small> /month + $250 setup</small></span><a href="maintenance.html" style="font-weight:800;text-decoration:none">See the Maintenance calculator →</a></div>
+</div>
+</div>
+</section>
+
+<section class="band-white"><div class="wrap sec stack-lg" style="gap:32px">
+<div class="head"><p class="eyebrow red">For you</p><h2>Every lead arrives ready to quote.</h2><p class="lede" style="font-size:18px">Not just a name and “need a new AC.” Sent to your email and Google Calendar the moment they finish.</p></div>
+<div class="grid g-260" style="gap:14px">
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Name, phone and email</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home address</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg>Unit model, size and system type</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>The option and price they saw</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Indoor location and add-ons</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><polyline points="22 4 12 14 9 11"/></svg>A booked visit time</div>
+</div>
 </div></section>
-<section class="section-alt"><div class="wrap">
-  <div class="section-head"><span class="eyebrow">Simple pricing</span><h2>Pay for leads, not software</h2></div>
-  <div class="grid g3">
-    <div class="card center"><div class="price">$250</div><p class="muted">One-time setup. We build it with your prices.</p></div>
-    <div class="card center"><div class="price">$2–$5</div><p class="muted">Per lead, depending on your trade.</p></div>
-    <div class="card center"><div class="price">$0</div><p class="muted">Monthly fee. No contract.</p></div>
-  </div>
-  <p class="center" style="margin-top:32px"><a class="btn btn-primary btn-lg" href="signup.html">Try it free</a> &nbsp; <a href="pricing.html">See full pricing →</a></p>
+
+<section id="how" class="band-navy"><div class="wrap sec stack-lg" style="gap:40px">
+<div class="head"><p class="eyebrow mustard">How it works</p><h2>Four steps, and only one takes your time.</h2></div>
+<div class="grid g-230">
+<div class="step"><span class="num">1</span><h3>Free demo</h3><p>We build a working calculator with your logo.</p></div>
+<div class="step hi"><span class="num">2</span><h3>Your prices</h3><p>You fill in one 20-minute price-book form.</p></div>
+<div class="step"><span class="num">3</span><h3>You approve</h3><p>Try it with real addresses and tweak anything.</p></div>
+<div class="step"><span class="num">4</span><h3>Go live</h3><p>One line of code on your site. We send it to your web person, or add it ourselves.</p></div>
+</div>
+<div><a class="btn btn-mustard" href="signup.html">Try it free</a></div>
 </div></section>
-<section><div class="wrap"><div class="cta-band">
-  <span class="script">Play ball</span>
-  <h2>Turn website visitors into booked jobs</h2>
-  <p>Get a free demo of your calculator with your prices. Go live when you love it.</p>
-  <div class="btns"><a class="btn btn-mustard btn-lg" href="signup.html">Try it free</a><a class="btn btn-outline btn-lg" href="pricing.html">See pricing</a></div>
-</div></div></section>
+
+<section class="wrap sec stack-lg" style="gap:28px">
+<div class="callout grid g-300" style="align-items:center;gap:32px;padding:40px">
+<div class="stack" style="gap:10px"><p class="eyebrow dirt">What it’s worth</p><h2 style="font-size:clamp(1.6rem,3vw,2.25rem)">One extra install pays for it for more than 8 years.</h2></div>
+<p style="font-size:18px;line-height:1.55">Example: $598 the first year ($29 a month plus $250 setup) against $3,150 gross profit on one $9,000 install at 35%. We’ll run it with your numbers on a quick call.</p>
+</div>
+<div class="grid g-260" style="gap:18px">
+<div class="card"><h3>Your brand only</h3><p>Homeowners see your logo and colors. Never ours.</p></div>
+<div class="card"><h3>Works with any website</h3><p>WordPress, Wix, Squarespace or custom, plus your ad landing pages.</p></div>
+<div class="card"><h3>No per-lead fees</h3><p>Unlimited leads and booked visits. Month to month.</p></div>
+</div>
+</section>
+
+<section class="band-white"><div class="wrap narrow sec stack" style="gap:14px">
+<p class="eyebrow center">Questions</p>
+<h2 class="center" style="font-size:clamp(1.6rem,3vw,2.25rem);margin-bottom:12px">Good questions from HVAC owners</h2>
+<div class="faq">
+<details open><summary>What does “try it free” include?</summary><p>We build a working demo of your calculator with your logo and send you a link to try it. No card needed. You pay the $250 setup only when you decide to go live.</p></details>
+<details><summary>Whose prices does it show?</summary><p>Yours. You fill in one 20-minute price-book form, and every estimate comes from it.</p></details>
+<details><summary>What if the homeowner doesn’t know their system?</summary><p>Every question has a “Not sure” option. The calculator prices the most common setup for their area and says so on the estimate.</p></details>
+<details><summary>Is there a contract?</summary><p>No. It’s month to month, and you can cancel any time.</p></details>
+<details><summary>Will homeowners treat the estimate as a quote?</summary><p>Every estimate says “Estimate only · not a quote” and explains that the final price is set in writing after an in-home visit. Homeowners confirm they understand before they send their details.</p></details>
+</div>
+</div></section>
+<div style="height:88px"></div>
+<section class="wrap" style="padding-bottom:88px">
+<div class="cta-band"><p class="script">See it with your logo first.</p><h2>Get a free working demo of your calculator.</h2><p>We’ll build it, send you the link, and you decide if it goes live.</p>
+<div class="row mid" style="padding-top:10px"><a class="btn btn-mustard" href="signup.html">Try it free</a><a class="btn btn-light" href="pricing.html">See pricing</a></div></div>
+</section>
 
 </main>
 <footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <img class="foot-logo" src="assets/logo-horizontal-reverse.svg" alt="Ballpark Leads" width="150" height="52">
-        <p>Instant cost calculators for contractor websites. Homeowners get a ballpark price. You get the lead.</p>
-        <a class="btn btn-mustard" href="signup.html">Sign up now</a>
-      </div>
-      <div><h4>Product</h4><ul><li><a href="features.html">Why Ballpark Leads</a></li><li><a href="features.html#how">How it works</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="signup.html">Try it free</a></li></ul></div>
-      <div><h4>Industries</h4><ul><li><a href="roofing.html">Roofing</a></li><li><a href="hvac.html">HVAC</a></li><li><a href="industries.html">All trades</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li><a href="mailto:hello@ballparkleads.com">hello@ballparkleads.com</a></li><li><a href="signup.html">Book a quick call</a></li></ul></div>
-    </div>
-    <div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads. All rights reserved.</span><span>Estimates shown on this site are demos, not quotes.</span></div>
-  </div>
+<div class="wrap">
+<div class="foot-grid">
+<div class="stack" style="align-items:flex-start">
+<img class="foot-logo" src="assets/logo-horizontal-reverse.svg" alt="Ballpark Leads" width="160" height="56">
+<p style="font-size:15px">Instant estimate calculators for HVAC company websites.</p>
+<a class="btn btn-mustard btn-sm" href="signup.html">Try it free</a>
+</div>
+<div><h4>Calculators</h4><ul><li><a href="install.html">Install calculator</a></li><li><a href="maintenance.html">Maintenance calculator</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="index.html#how">How it works</a></li><li><a href="signup.html">Free demo</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li></ul></div>
+</div>
+<div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads</span><span>Estimates on this site use sample prices and are not quotes.</span></div>
+</div>
 </footer>
-<a class="btn btn-primary btn-lg sticky-cta" href="signup.html">Try it free</a>
 <script src="site.js" defer></script>
 </body>
 </html>
