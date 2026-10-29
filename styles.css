@@ -78,9 +78,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,su
 
 /* Grids */
 .grid{display:grid;gap:20px}
-.g-230{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.g-260{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.g-300{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g-230{grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr))}
+.g-260{grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr))}
+.g-300{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}
 .g-340{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}
 .split{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
 .split>*{flex:1 1 380px;min-width:0}
