@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://www.ballparkleads.com/assets/share.png">
 <meta name="theme-color" content="#14254A">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -80,16 +80,19 @@
 </div>
 </section>
 
-<section class="band-white"><div class="wrap sec split">
-<div class="stack">
+<section class="band-white"><div class="wrap sec stack-lg" style="gap:32px">
+<div class="stack" style="max-width:760px">
 <p class="eyebrow red">What you get</p><h2 style="font-size:clamp(1.6rem,3vw,2.25rem)">A lead your tech can quote before the truck rolls.</h2>
 <p class="muted">Every finished estimate lands in your inbox the moment it’s sent, with a copy of the branded PDF the homeowner received. Call while they’re still looking at the price.</p>
 <div><a class="btn btn-primary" href="/signup.html?calc=install">Try it free</a></div>
 </div>
+<div class="grid g-340" style="gap:24px;align-items:start">
 <div class="lead">
 <div class="row" style="justify-content:space-between;gap:8px"><b style="font-size:17px">New install lead</b><span class="pill-ok">ESTIMATE EMAILED · CALL TO SCHEDULE</span></div>
 <dl><dt>Homeowner</dt><dd>Dana R. · (813) 555-0142</dd><dt>Address</dt><dd>412 Bayshore Dr, Tampa</dd><dt>Current unit</dt><dd>GSX160361 · 3 ton</dd><dt>Picked</dt><dd>Better · AC + air handler · $9,150 – $10,000</dd><dt>Location</dt><dd>Closet, garage or basement</dd><dt>Add-ons</dt><dd>None</dd></dl>
 <span class="small muted">Sample lead with made-up details.</span>
+</div>
+<figure class="sample-fig"><img src="/assets/estimate-pdf-sample.webp" width="560" height="725" loading="lazy" decoding="async" alt="Sample estimate PDF, page 1: the Ballpark Leads logo, a price range of $9,150 to $10,000 for a 3-ton AC with an air handler, the homeowner’s details, what’s included, what happens next and the “Estimate only, not a quote” notice"><figcaption><b>And the homeowner gets this, with your logo</b><a href="/assets/sample-estimate.pdf" target="_blank" rel="noopener">Open the sample PDF</a></figcaption></figure>
 </div>
 </div></section>
 <div style="height:88px"></div>
@@ -108,9 +111,9 @@
 <p style="font-size:15px">Instant estimate calculators for HVAC company websites.</p>
 <a class="btn btn-mustard btn-sm" href="/signup.html">Try it free</a>
 </div>
-<div><h4>Calculators</h4><ul><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/signup.html">Free demo</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
-<div><h4>Contact</h4><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li><li><a href="mailto:ballparkleads@gmail.com?subject=Book%20a%2015-minute%20call">Email us to set up a call</a></li></ul></div>
+<div><p class="foot-h">Calculators</p><ul><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+<div><p class="foot-h">Company</p><ul><li><a href="/#how">How it works</a></li><li><a href="/signup.html">Free demo</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+<div><p class="foot-h">Contact</p><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li><li><a href="mailto:ballparkleads@gmail.com?subject=Book%20a%2015-minute%20call">Email us to set up a call</a></li></ul></div>
 </div>
 <div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span><span>Estimates on this site use sample prices and are not quotes.</span></div>
 </div>

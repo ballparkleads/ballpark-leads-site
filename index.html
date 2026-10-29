@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="https://www.ballparkleads.com/assets/share.png">
 <meta name="theme-color" content="#14254A">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -103,13 +103,20 @@
 
 <section class="band-white"><div class="wrap sec stack-lg" style="gap:32px">
 <div class="head"><p class="eyebrow red">For you</p><h2>Every lead arrives ready to quote.</h2><p class="lede" style="font-size:18px">Not just a name and “need a new AC.” Sent to your email the moment they finish. Maintenance bookings land on your Google Calendar too.</p></div>
+<div class="stack" style="gap:10px">
+<div class="grid g-340 samples" style="gap:24px;align-items:start">
+<figure class="sample-fig"><img src="/assets/lead-email-sample.webp" width="560" height="817" loading="lazy" decoding="async" alt="Sample lead email showing the homeowner’s contact details, address, current unit and the option and price they picked, with Call and Email buttons and the estimate PDF attached"><figcaption><b>What your team gets</b></figcaption></figure>
+<figure class="sample-fig"><img src="/assets/estimate-pdf-sample.webp" width="560" height="725" loading="lazy" decoding="async" alt="Sample estimate PDF, page 1: the Ballpark Leads logo, a price range of $9,150 to $10,000 for a 3-ton AC with an air handler, the homeowner’s details, what’s included, what happens next and the “Estimate only, not a quote” notice"><figcaption><b>What the homeowner gets</b><a href="/assets/sample-estimate.pdf" target="_blank" rel="noopener">Open the sample PDF</a></figcaption></figure>
+</div>
+<p class="small muted">Samples with made-up details.</p>
+</div>
 <div class="grid g-260" style="gap:14px">
 <div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Name, phone and email</div>
 <div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Home address</div>
 <div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg>Unit model, size and system type</div>
 <div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.1 8.3 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 8.9 8.3 12 2"/></svg>The option and price they saw</div>
-<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Indoor location and add-ons</div>
-<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.1V12a10 10 0 1 1-5.9-9.1"/><polyline points="22 4 12 14 9 11"/></svg>A copy of the estimate PDF they received</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Indoor location and add-ons</div>
+<div class="card soft lead-item"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E7D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>A copy of the estimate PDF they received</div>
 </div>
 </div></section>
 
@@ -166,9 +173,9 @@
 <p style="font-size:15px">Instant estimate calculators for HVAC company websites.</p>
 <a class="btn btn-mustard btn-sm" href="/signup.html">Try it free</a>
 </div>
-<div><h4>Calculators</h4><ul><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/signup.html">Free demo</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
-<div><h4>Contact</h4><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li><li><a href="mailto:ballparkleads@gmail.com?subject=Book%20a%2015-minute%20call">Email us to set up a call</a></li></ul></div>
+<div><p class="foot-h">Calculators</p><ul><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+<div><p class="foot-h">Company</p><ul><li><a href="/#how">How it works</a></li><li><a href="/signup.html">Free demo</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+<div><p class="foot-h">Contact</p><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li><li><a href="mailto:ballparkleads@gmail.com?subject=Book%20a%2015-minute%20call">Email us to set up a call</a></li></ul></div>
 </div>
 <div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span><span>Estimates on this site use sample prices and are not quotes.</span></div>
 </div>
