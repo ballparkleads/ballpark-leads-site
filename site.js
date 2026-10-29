@@ -75,7 +75,10 @@
     lines.push('Permit and old unit removal included');
 
     var adds = [];
-    root.querySelectorAll('input[name="add"]:checked').forEach(function (c) { point += ADDONS[c.value]; adds.push(ADD_LABEL[c.value]); });
+    root.querySelectorAll('input[name="add"]:checked').forEach(function (c) {
+      if (sys === 'furnace' && c.value === 'lineset') return; // a line set never applies to a furnace-only job
+      point += ADDONS[c.value]; adds.push(ADD_LABEL[c.value]);
+    });
     if (adds.length) lines.push('Includes ' + adds.join(', '));
     if (sys !== 'furnace' && opt !== 'good') lines.push('May qualify for a local utility rebate (15.2+ SEER2)');
     if (loc === 'attic' || loc === 'notsure') maybe.push('attic or crawlspace access work');
@@ -95,6 +98,16 @@
     var skip = calc.querySelector('[data-skip]');
 
     function update() {
+      // Gas furnace only: no size, no "what to replace", no line set
+      var furnaceOnly = val(calc, 'sys', '') === 'furnace';
+      calc.querySelectorAll('[data-hide-furnace]').forEach(function (el) {
+        el.hidden = furnaceOnly;
+        el.querySelectorAll('input').forEach(function (i) { i.disabled = furnaceOnly; });
+        if (furnaceOnly && el.matches('label')) { var cb = el.querySelector('input'); if (cb) cb.checked = false; }
+      });
+      var fNote = calc.querySelector('[data-furnace-note]');
+      if (fNote) fNote.hidden = !furnaceOnly;
+
       var e = estimate(calc);
       amt.textContent = money(e.low) + ' – ' + money(e.high);
       if (list) {
@@ -113,7 +126,9 @@
     if (model) {
       model.addEventListener('input', function () {
         var m = model.value.toUpperCase().match(/(018|024|030|036|042|048|060)/);
-        if (m) {
+        if (m && m[1] === '018') {
+          modelMsg.textContent = 'That looks like 1.5 tons. Pick the closest size below.';
+        } else if (m) {
           var tons = String(parseInt(m[1], 10) / 12);
           var r = calc.querySelector('input[name="size"][value="' + tons + '"]');
           if (r) r.checked = true;
@@ -154,17 +169,23 @@
       panes.forEach(function (p) { p.hidden = p.dataset.pane !== name; });
       update();
     }
+    var msg = w.querySelector('[data-m-msg]');
+    var ageNote = w.querySelector('[data-age-note]');
+    if (cta && msg) cta.addEventListener('click', function () { msg.hidden = false; });
     function update() {
       var n = parseInt(val(w, 'systems', '1'), 10);
       var extra = Math.max(0, n - 1);
+      var sysLabel = n === 1 ? '1 SYSTEM' : (n >= 3 ? '3+ SYSTEMS' : n + ' SYSTEMS');
+      if (ageNote) ageNote.hidden = val(w, 'age', '') !== '15plus';
+      if (msg) msg.hidden = true;
       if (state === 'plan') {
         var plan = val(w, 'plan', 'standard');
-        lbl.textContent = plan.toUpperCase() + ' PLAN · ' + n + (n === 1 ? ' SYSTEM' : ' SYSTEMS');
+        lbl.textContent = plan.toUpperCase() + ' PLAN · ' + sysLabel;
         amt.textContent = money(PLAN[plan] + EXTRA * extra) + ' a month';
         sub.textContent = 'Billed monthly, renews automatically, cancel any time.';
         cta.textContent = 'Join + book my tune-up';
       } else if (state === 'tune') {
-        lbl.textContent = 'TUNE-UP · ' + n + (n === 1 ? ' SYSTEM' : ' SYSTEMS');
+        lbl.textContent = 'TUNE-UP · ' + sysLabel;
         amt.textContent = money(TUNEUP + EXTRA_TUNE * extra);
         sub.textContent = 'Plan members get tune-ups included.';
         cta.textContent = 'Book my tune-up';
@@ -182,7 +203,8 @@
 
   // ---------- Sign-up form ----------
   var params = new URLSearchParams(location.search);
-  document.querySelectorAll('form[data-netlify]').forEach(function (form) {
+  // Netlify strips data-netlify when it deploys, so find the form by its name
+  document.querySelectorAll('form[name="signup"]').forEach(function (form) {
     var want = params.get('calc');
     if (want) { var r = form.querySelector('input[name="calculator"][value="' + want + '"]'); if (r) r.checked = true; }
     if (form.referrer) form.referrer.value = document.referrer || 'direct';

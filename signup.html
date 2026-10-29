@@ -5,22 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Try it free — Ballpark Leads</title>
 <meta name="description" content="Get a free working demo of your HVAC estimate calculator with your logo. No card, no contract.">
+<link rel="canonical" href="https://www.ballparkleads.com/signup">
+<meta property="og:url" content="https://www.ballparkleads.com/signup">
 <meta property="og:title" content="Try it free — Ballpark Leads">
 <meta property="og:description" content="Get a free working demo of your HVAC estimate calculator with your logo. No card, no contract.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Ballpark Leads">
+<meta property="og:image" content="https://www.ballparkleads.com/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ballpark Leads: Show them the price. Get the call before they click back to Google.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.ballparkleads.com/assets/share.png">
 <meta name="theme-color" content="#14254A">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bungee&family=Manrope:wght@500;600;700;800&family=Yellowtail&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-header">
 <div class="wrap nav">
-<a class="brand" href="index.html"><img src="assets/logo-horizontal.svg" alt="Ballpark Leads" width="176" height="61"></a>
-<nav aria-label="Main"><ul class="nav-links"><li><a href="install.html">Install calculator</a></li><li><a href="maintenance.html">Maintenance calculator</a></li><li><a href="index.html#how">How it works</a></li><li><a href="pricing.html">Pricing</a></li></ul></nav>
-<div class="nav-right"><a class="btn btn-outline btn-sm" href="pricing.html">See pricing</a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14254A" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div>
+<a class="brand" href="/"><img src="/assets/logo-horizontal.svg" alt="Ballpark Leads" width="176" height="61"></a>
+<nav aria-label="Main"><ul class="nav-links"><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/#how">How it works</a></li><li><a href="/pricing.html">Pricing</a></li></ul></nav>
+<div class="nav-right"><a class="btn btn-outline btn-sm" href="/pricing.html">See pricing</a><button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14254A" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div>
 </div>
 </header>
 <main id="main">
@@ -38,7 +47,7 @@
 </div>
 <div class="callout" style="padding:16px 20px;font-size:15px">No card needed for the demo. No contract when you go live.</div>
 </div>
-<form class="form-card" style="flex:1 1 480px" name="signup" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="company_url">
+<form class="form-card" style="flex:1 1 480px" name="signup" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company_url">
 <input type="hidden" name="form-name" value="signup">
 <input type="hidden" name="referrer" value="">
 <p class="hidden"><label>Leave this empty: <input name="company_url"></label></p>
@@ -48,7 +57,7 @@
 <div class="field"><label for="s-co">Company name</label><input id="s-co" name="business" autocomplete="organization" required></div>
 <div class="field"><label for="s-email">Email</label><input id="s-email" type="email" name="email" autocomplete="email" required></div>
 <div class="field"><label for="s-phone">Phone</label><input id="s-phone" type="tel" name="phone" autocomplete="tel"></div>
-<div class="field"><label for="s-site">Website</label><input id="s-site" name="website" placeholder="yourcompany.com" inputmode="url"></div>
+<div class="field"><label for="s-site">Website</label><input id="s-site" name="website" placeholder="yourcompany.com" inputmode="url" aria-describedby="s-site-note"><span class="field-note" id="s-site-note">We’ll grab your logo from your website. No website? Email it to us after you sign up.</span></div>
 <div class="field"><label for="s-zip">Main service area ZIP</label><input id="s-zip" name="zip" inputmode="numeric" autocomplete="postal-code"></div>
 </div>
 <fieldset><legend>Which calculator?</legend><div class="chips">
@@ -56,7 +65,7 @@
 <label class="chip"><input type="radio" name="calculator" value="maintenance">Maintenance</label>
 <label class="chip"><input type="radio" name="calculator" value="both" checked>Both</label>
 </div></fieldset>
-<div class="field"><label for="s-ads">Running Google ads now?</label><select id="s-ads" name="google_ads"><option value="yes">Yes</option><option value="no">No</option><option value="planning">Planning to</option></select></div>
+<div class="field"><label for="s-ads">Running Google ads now?</label><select id="s-ads" name="google_ads"><option value="" selected>Choose one</option><option value="yes">Yes</option><option value="no">No</option><option value="planning">Planning to</option></select></div>
 <button class="btn btn-primary btn-block" type="submit">Try it free</button>
 <p class="small muted center">We only use this to build your demo and follow up with you.</p>
 </form>
@@ -67,17 +76,17 @@
 <div class="wrap">
 <div class="foot-grid">
 <div class="stack" style="align-items:flex-start">
-<img class="foot-logo" src="assets/logo-horizontal-reverse.svg" alt="Ballpark Leads" width="160" height="56">
+<img class="foot-logo" src="/assets/logo-horizontal-reverse.svg" alt="Ballpark Leads" width="160" height="56">
 <p style="font-size:15px">Instant estimate calculators for HVAC company websites.</p>
-<a class="btn btn-mustard btn-sm" href="signup.html">Try it free</a>
+<a class="btn btn-mustard btn-sm" href="/signup.html">Try it free</a>
 </div>
-<div><h4>Calculators</h4><ul><li><a href="install.html">Install calculator</a></li><li><a href="maintenance.html">Maintenance calculator</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
-<div><h4>Company</h4><ul><li><a href="index.html#how">How it works</a></li><li><a href="signup.html">Free demo</a></li></ul></div>
-<div><h4>Contact</h4><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li></ul></div>
+<div><h4>Calculators</h4><ul><li><a href="/install.html">Install calculator</a></li><li><a href="/maintenance.html">Maintenance calculator</a></li><li><a href="/pricing.html">Pricing</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/signup.html">Free demo</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>Frank Fontana</li><li><a href="mailto:ballparkleads@gmail.com">ballparkleads@gmail.com</a></li><li><a href="mailto:ballparkleads@gmail.com?subject=Book%20a%2015-minute%20call">Book a 15-minute call</a></li></ul></div>
 </div>
-<div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads</span><span>Estimates on this site use sample prices and are not quotes.</span></div>
+<div class="foot-bottom"><span>© <span data-year>2026</span> Ballpark Leads · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span><span>Estimates on this site use sample prices and are not quotes.</span></div>
 </div>
 </footer>
-<script src="site.js" defer></script>
+<script src="/site.js" defer></script>
 </body>
 </html>
